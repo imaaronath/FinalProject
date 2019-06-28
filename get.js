@@ -37,5 +37,14 @@ $(function() {
     function check_password()
     {
         var password_length = $("#form_password").val().length;
+        
+        if(password_length <12){
+            $("#password_error_message").html("At least 12 characters");
+            $("#password_error_message").show();
+            error_password = true;
+        }
+        else {
+            $("#password_error_message").hide();
+        }
     }
 });
